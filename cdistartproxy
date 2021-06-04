@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kubectl port-forward -n cdi service/cdi-uploadproxy 8443:443

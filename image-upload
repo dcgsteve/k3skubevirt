@@ -1,0 +1,7 @@
+#!/bin/bash
+
+virtctl image-upload --uploadproxy-url=https://127.0.0.1:8443 \
+  --insecure \
+  --pvc-name=$1 \
+  --pvc-size=40Gi \
+  --image-path=$1.qcow2

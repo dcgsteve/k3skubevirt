@@ -1,0 +1,31 @@
+apiVersion: kubevirt.io/v1alpha3
+kind: VirtualMachine
+metadata:
+  name: vm1
+spec:
+  running: true
+  template:
+    metadata:
+      labels: 
+        kubevirt.io/domain: vm1
+    spec:
+      domain:
+        devices:
+          disks:
+          - disk:
+              bus: sata
+            name: maindisk
+          interfaces:
+          - name: default
+            masquerade: {}
+        resources:
+          requests:
+            memory: 4096M
+      networks:
+      - name: default
+        pod: {}
+      volumes:
+      - name: maindisk
+        persistentVolumeClaim:
+          claimName: win10-gen1
+  

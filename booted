@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+sudo kubectl config view --raw > ~/.kube/config

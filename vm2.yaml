@@ -1,0 +1,34 @@
+apiVersion: kubevirt.io/v1alpha3
+kind: VirtualMachine
+metadata:
+  name: vm2
+spec:
+  running: true
+  template:
+    metadata:
+      labels: 
+        kubevirt.io/domain: vm2
+    spec:
+      domain:
+        firmware:
+          bootloader:
+            efi:
+              secureBoot: false
+        devices:
+          disks:
+          - disk:
+              bus: sata
+            name: maindisk
+          interfaces:
+          - name: default
+            masquerade: {}
+        resources:
+          requests:
+            memory: 4096M
+      networks:
+      - name: default
+        pod: {}
+      volumes:
+      - name: maindisk
+        persistentVolumeClaim:
+          claimName: w2016-gen2
