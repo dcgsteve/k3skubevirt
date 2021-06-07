@@ -1,6 +1,0 @@
-#!/bin/bash
-
-virtctl image-upload --uploadproxy-url=http://10.43.131.22 \
-  --pvc-name=win10-gen1 \
-  --pvc-size=20Gi \
-  --image-path=win10-gen1.qcow2
