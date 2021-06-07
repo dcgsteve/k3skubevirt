@@ -27,4 +27,4 @@
 | Test Pack  | Upload image(s)                                | Upload any qcow2 images you need using `image-upload xxx` where `xxx` is the qcow2 image file name *without .qcow2 at the end*, e.g. `image-upload win10g1` |
 | Test Pack  | VM | Use example YAML files to create a VM with `kubectl apply -f xxxx.yaml` |
 | Test Pack  | VM | If your config doesn't auto start VM then start it manually | `virtctl start xxx` |
-| Test pack  | VM | Check if VM is up and running | 
+| Test pack  | VM | Check if VM is up and running `virtctl vnc xxx` | 
