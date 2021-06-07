@@ -12,7 +12,8 @@
 | Hardening  | Install fail2ban and protect SSH daemon        | `sudo apt install fail2ban -y` |
 | Clean      | Remove packages no longer required             | `sudo apt autoremove -y` |
 | Clean      | Clean up cache                                 | `sudo apt clean` |
-| Pre-req    | Install any pre-requisities                    | `sudo apt install -y curl git qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst virt-manager` |
+| Pre-req    | Install any pre-requisities                    | `sudo apt install -y curl git qemu-kvm libvirt-daemon-system libvirt-clients` |
+| Pre-req    | Install any optional pre-requisities           | `sudo apt install -y bridge-utils virtinst virt-manager` |
 | Pre-req    | Clone test pack from Git                       | `git clone https://github.com/dcgsteve/k3skubevirt.git`
 | Pre-req    | Reboot                                         | |
 | PaaS       | Install K3S                                    | curl -sfL https://get.k3s.io | sh - |
