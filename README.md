@@ -12,7 +12,8 @@
 | Hardening  | Install fail2ban and protect SSH daemon        | `sudo apt install fail2ban -y` |
 | Clean      | Remove packages no longer required             | `sudo apt autoremove -y` |
 | Clean      | Clean up cache                                 | `sudo apt clean` |
-| Pre-req    | Install any pre-requisities                    | `sudo apt install -y curl git qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virtinst virt-manager` |
+| Pre-req    | Install any pre-requisities                    | `sudo apt install -y curl git qemu-kvm libvirt-daemon-system libvirt-clients` |
+| Pre-req    | Install any optional pre-requisities           | `sudo apt install -y bridge-utils virtinst virt-manager` |
 | Pre-req    | Clone test pack from Git                       | `git clone https://github.com/dcgsteve/k3skubevirt.git`
 | Pre-req    | Reboot                                         | |
 | PaaS       | Install K3S                                    | curl -sfL https://get.k3s.io | sh - |
@@ -26,4 +27,4 @@
 | Test Pack  | Upload image(s)                                | Upload any qcow2 images you need using `image-upload xxx` where `xxx` is the qcow2 image file name *without .qcow2 at the end*, e.g. `image-upload win10g1` |
 | Test Pack  | VM | Use example YAML files to create a VM with `kubectl apply -f xxxx.yaml` |
 | Test Pack  | VM | If your config doesn't auto start VM then start it manually | `virtctl start xxx` |
-| Test pack  | VM | Check if VM is up and running | 
+| Test pack  | VM | Check if VM is up and running `virtctl vnc xxx` | 
