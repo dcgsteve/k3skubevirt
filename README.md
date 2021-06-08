@@ -16,7 +16,7 @@
 | Pre-req    | Install any optional pre-requisities           | `sudo apt install -y bridge-utils virtinst virt-manager` |
 | Pre-req    | Clone test pack from Git                       | `git clone https://github.com/dcgsteve/k3skubevirt.git`
 | Pre-req    | Reboot                                         | |
-| PaaS       | Install K3S                                    | curl -sfL https://get.k3s.io | sh - |
+| PaaS       | Install K3S                                    | `curl -sfL https://get.k3s.io \| sh -` |
 | Test Pack  | Update config after booting up K3S             | `booted` |
 | PaaS       | Wait for K3S to be ready                       | Wait until `k3s kubectl get node` returns Status of Ready |
 | Test Pack  | CDI                                            | `cdiadd` |
