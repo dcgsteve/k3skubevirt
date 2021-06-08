@@ -17,7 +17,7 @@
 | Pre-req    | Clone test pack from Git                       | `git clone https://github.com/dcgsteve/k3skubevirt.git`
 | Pre-req    | Reboot                                         | |
 | PaaS       | Install K3S                                    | `curl -sfL https://get.k3s.io \| sh -` |
-| Test Pack  | Update config after booting up K3S             | `booted` |
+| Test Pack  | Update config after booting up K3S             | Run the helper script `booted`. <br>NB this is to get around an odd K3S specific issue with config files in the "wrong" place where kubectl didn't have permissions plus adding in compatability to use other K8S generic tools |
 | PaaS       | Wait for K3S to be ready                       | Wait until `k3s kubectl get node` returns Status of Ready |
 | Test Pack  | CDI                                            | `cdiadd` |
 | Test Pack  | KubeVirt                                       | `kvadd` |
